@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0">
+    <title>Overlay de Transmisión - Raiden Cortés</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ruined: {
+                            cyan: '#00ffcc',
+                            mint: '#3affcf',
+                            dark: '#081212',
+                            border: 'rgba(0, 255, 204, 0.4)'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        body, html {
+            width: 1920px;
+            height: 1080px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: transparent;
+            font-family: 'Rajdhani', sans-serif;
+            color: #e2fdf8;
+        }
+
+        /* Paneles con estética de la Ruina */
+        .ruined-panel {
+            background: rgba(6, 15, 15, 0.85);
+            border: 1px solid rgba(0, 255, 204, 0.4);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), inset 0 0 10px rgba(0, 229, 163, 0.08);
+        }
+
+        .ruined-text-glow {
+            text-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
+        }
+
+        /* Adornos metálicos en las esquinas */
+        .corner-ornament {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-color: #00ffcc;
+            pointer-events: none;
+            filter: drop-shadow(0 0 4px #00ffcc);
+        }
+        .corner-tl { top: -2px; left: -2px; border-top: 3px solid; border-left: 3px solid; }
+        .corner-tr { top: -2px; right: -2px; border-top: 3px solid; border-right: 3px solid; }
+        .corner-bl { bottom: -2px; left: -2px; border-bottom: 3px solid; border-left: 3px solid; }
+        .corner-br { bottom: -2px; right: -2px; border-bottom: 3px solid; border-right: 3px solid; }
+    </style>
+</head>
+<body class="w-[1920px] h-[1080px] relative overflow-hidden bg-transparent">
+
+    <!-- Contenedor Principal en 1920x1080 -->
+    <div class="relative z-10 w-[1920px] h-[1080px] p-8 flex flex-col justify-between">
+
+        <!-- ENCABEZADO: Título y Redes Sociales -->
+        <header class="w-full flex justify-between items-center">
+            
+            <!-- Identificador de Nombre / Canal -->
+            <div class="ruined-panel px-6 py-2.5 rounded-xl flex items-center gap-3.5 relative">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                
+                <i class="fa-solid fa-dragon text-2xl text-ruined-cyan"></i>
+                <h1 class="font-cinzel text-xl font-bold tracking-widest text-white ruined-text-glow">
+                    RAIDEN <span class="text-ruined-cyan">CORTES 123</span>
+                </h1>
+            </div>
+
+            <!-- Barra de Redes Sociales (5 Redes) -->
+            <div class="ruined-panel px-6 py-2.5 rounded-xl flex items-center gap-5 relative font-rajdhani font-bold text-base">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+
+                <!-- YouTube -->
+                <div class="flex items-center gap-2 text-white">
+                    <i class="fa-brands fa-youtube text-red-500 text-lg"></i>
+                    <span>@raidencortes123</span>
+                </div>
+
+                <div class="h-4 w-[1px] bg-ruined-cyan/30"></div>
+
+                <!-- Twitch -->
+                <div class="flex items-center gap-2 text-white">
+                    <i class="fa-brands fa-twitch text-purple-400 text-lg"></i>
+                    <span>raidencortes123</span>
+                </div>
+
+                <div class="h-4 w-[1px] bg-ruined-cyan/30"></div>
+
+                <!-- Instagram -->
+                <div class="flex items-center gap-2 text-white">
+                    <i class="fa-brands fa-instagram text-pink-500 text-lg"></i>
+                    <span>raidencortes123</span>
+                </div>
+
+                <div class="h-4 w-[1px] bg-ruined-cyan/30"></div>
+
+                <!-- X (Twitter) -->
+                <div class="flex items-center gap-2 text-white">
+                    <svg class="w-4 h-4 fill-current text-ruined-cyan" viewBox="0 0 24 24">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    <span>@RaidenCortes123</span>
+                </div>
+
+                <div class="h-4 w-[1px] bg-ruined-cyan/30"></div>
+
+                <!-- TikTok -->
+                <div class="flex items-center gap-2 text-white">
+                    <i class="fa-brands fa-tiktok text-ruined-cyan text-lg"></i>
+                    <span>@raiden_cortes_123</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ÁREA PRINCIPAL -->
+        <main class="w-full flex-1 flex justify-between items-end my-4 gap-8">
+
+            <!-- LADO IZQUIERDO: Métricas + Cámara -->
+            <div class="flex flex-col gap-3">
+
+                <!-- Espacio 1 para Métricas (100px de Alto) -->
+                <div class="w-[480px] h-[100px] relative ruined-panel rounded-xl">
+                    <div class="corner-ornament corner-tl border-l-2 border-t-2 w-3.5 h-3.5"></div>
+                    <div class="corner-ornament corner-tr border-r-2 border-t-2 w-3.5 h-3.5"></div>
+                    <div class="corner-ornament corner-bl border-l-2 border-b-2 w-3.5 h-3.5"></div>
+                    <div class="corner-ornament corner-br border-r-2 border-b-2 w-3.5 h-3.5"></div>
+                </div>
+
+                <!-- Espacio 2 para Métricas (100px de Alto) -->
+                <div class="w-[480px] h-[100px] relative ruined-panel rounded-xl">
+                    <div class="corner-ornament corner-tl border-l-2 border-t-2 w-3.5 h-3.5"></div>
+                    <div class="corner-ornament corner-tr border-r-2 border-t-2 w-3.5 h-3.5"></div>
+                    <div class="corner-ornament corner-bl border-l-2 border-b-2 w-3.5 h-3.5"></div>
+                    <div class="corner-ornament corner-br border-r-2 border-b-2 w-3.5 h-3.5"></div>
+                </div>
+
+                <!-- Marco para Cámara Web -->
+                <div class="w-[480px] h-[280px] relative ruined-panel rounded-2xl overflow-hidden flex flex-col justify-between p-3">
+                    <div class="corner-ornament corner-tl border-l-4 border-t-4 w-4 h-4"></div>
+                    <div class="corner-ornament corner-tr border-r-4 border-t-4 w-4 h-4"></div>
+                    <div class="corner-ornament corner-bl border-l-4 border-b-4 w-4 h-4"></div>
+                    <div class="corner-ornament corner-br border-r-4 border-b-4 w-4 h-4"></div>
+
+                    <!-- Etiqueta EN VIVO -->
+                    <div class="self-start flex items-center gap-2 bg-black/70 px-3 py-1 rounded-full border border-ruined-cyan/40">
+                        <span class="w-2.5 h-2.5 rounded-full bg-ruined-cyan"></span>
+                        <span class="text-xs font-bold font-cinzel text-ruined-cyan tracking-widest">EN VIVO</span>
+                    </div>
+
+                    <!-- Centro transparente para la cámara en OBS -->
+                    <div class="flex-1"></div>
+                </div>
+
+            </div>
+
+            <!-- LADO DERECHO: Espacio Transparente Designado para el Chat -->
+            <div class="w-[600px] h-[860px] relative ruined-panel rounded-2xl flex flex-col p-4">
+                <div class="corner-ornament corner-tl border-l-4 border-t-4 w-5 h-5"></div>
+                <div class="corner-ornament corner-tr border-r-4 border-t-4 w-5 h-5"></div>
+                <div class="corner-ornament corner-bl border-l-4 border-b-4 w-5 h-5"></div>
+                <div class="corner-ornament corner-br border-r-4 border-b-4 w-5 h-5"></div>
+
+                <!-- Título del Contenedor de Chat -->
+                <div class="pb-3 border-b border-ruined-cyan/20 flex items-center gap-2.5">
+                    <i class="fa-solid fa-comments text-ruined-cyan text-lg"></i>
+                    <span class="font-cinzel text-sm font-bold tracking-widest text-white">CHAT DEL STREAM</span>
+                </div>
+
+                <!-- Área Transparente para colocar tu propio Chat Overlay de OBS -->
+                <div class="flex-1 w-full bg-transparent"></div>
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
