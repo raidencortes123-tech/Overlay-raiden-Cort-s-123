@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0">
-    <title>Story Overlay - Fitted Cam & Ruined Theme</title>
+    <title>Story Overlay - Focused Header & Cam</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -50,21 +50,21 @@
             color: #e2fdf8;
         }
 
-        /* FONDO ELEGANTE SHYVANA ARRUINADA */
+        /* FONDO ESTILIZADO SHYVANA ARRUINADA */
         .ruined-bg {
             background: 
-                radial-gradient(circle at 50% 20%, rgba(0, 255, 204, 0.18) 0%, transparent 50%),
-                radial-gradient(circle at 50% 80%, rgba(0, 255, 204, 0.10) 0%, transparent 50%),
-                radial-gradient(circle at 10% 50%, rgba(1, 21, 20, 0.9) 0%, transparent 45%),
-                radial-gradient(circle at 90% 50%, rgba(1, 21, 20, 0.9) 0%, transparent 45%),
+                radial-gradient(circle at 50% 18%, rgba(0, 255, 204, 0.22) 0%, transparent 50%),
+                radial-gradient(circle at 50% 82%, rgba(0, 255, 204, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 10% 50%, rgba(1, 21, 20, 0.92) 0%, transparent 45%),
+                radial-gradient(circle at 90% 50%, rgba(1, 21, 20, 0.92) 0%, transparent 45%),
                 #020808;
         }
 
-        /* Malla / Red visual sutil */
+        /* Malla / Red visual */
         .cyber-grid {
             background-image: 
-                linear-gradient(to right, rgba(0, 255, 204, 0.04) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 255, 204, 0.04) 1px, transparent 1px);
+                linear-gradient(to right, rgba(0, 255, 204, 0.045) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 255, 204, 0.045) 1px, transparent 1px);
             background-size: 48px 48px;
         }
 
@@ -72,46 +72,46 @@
         .glass-panel {
             background: rgba(4, 16, 16, 0.88);
             backdrop-filter: blur(16px);
-            border: 2px solid rgba(0, 255, 204, 0.5);
-            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.9), inset 0 0 20px rgba(0, 255, 204, 0.18);
+            border: 2px solid rgba(0, 255, 204, 0.55);
+            box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.92), inset 0 0 24px rgba(0, 255, 204, 0.2);
         }
 
         /* Esquinas metálicas decorativas */
         .corner-ornament {
             position: absolute;
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             border-color: #00ffcc;
             pointer-events: none;
-            filter: drop-shadow(0 0 6px #00ffcc);
+            filter: drop-shadow(0 0 8px #00ffcc);
             z-index: 10;
         }
-        .corner-tl { top: -2px; left: -2px; border-top: 3px solid; border-left: 3px solid; }
-        .corner-tr { top: -2px; right: -2px; border-top: 3px solid; border-right: 3px solid; }
-        .corner-bl { bottom: -2px; left: -2px; border-bottom: 3px solid; border-left: 3px solid; }
-        .corner-br { bottom: -2px; right: -2px; border-bottom: 3px solid; border-right: 3px solid; }
+        .corner-tl { top: -2px; left: -2px; border-top: 4px solid; border-left: 4px solid; }
+        .corner-tr { top: -2px; right: -2px; border-top: 4px solid; border-right: 4px solid; }
+        .corner-bl { bottom: -2px; left: -2px; border-bottom: 4px solid; border-left: 4px solid; }
+        .corner-br { bottom: -2px; right: -2px; border-bottom: 4px solid; border-right: 4px solid; }
 
         .glow-cyan {
-            text-shadow: 0 0 14px rgba(0, 255, 204, 0.85), 0 0 28px rgba(0, 255, 204, 0.45);
+            text-shadow: 0 0 16px rgba(0, 255, 204, 0.9), 0 0 32px rgba(0, 255, 204, 0.5);
         }
 
         @keyframes subtlePulse {
-            0%, 100% { filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.4)); }
-            50% { filter: drop-shadow(0 0 20px rgba(0, 255, 204, 0.85)); }
+            0%, 100% { filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.45)); }
+            50% { filter: drop-shadow(0 0 22px rgba(0, 255, 204, 0.9)); }
         }
 
         .pulse-border {
             animation: subtlePulse 3.5s infinite ease-in-out;
         }
 
-        /* Aura Mística de fondo para rellenar la escena limpiamente */
+        /* Aura Mística de fondo */
         .mist-aura {
             position: absolute;
-            width: 850px;
-            height: 850px;
-            background: radial-gradient(circle, rgba(0, 255, 204, 0.08) 0%, rgba(0, 255, 204, 0) 70%);
+            width: 900px;
+            height: 900px;
+            background: radial-gradient(circle, rgba(0, 255, 204, 0.09) 0%, rgba(0, 255, 204, 0) 70%);
             pointer-events: none;
-            top: 48%;
+            top: 45%;
             left: 50%;
             transform: translate(-50%, -50%);
             animation: mistFloat 6s ease-in-out infinite alternate;
@@ -125,91 +125,93 @@
 </head>
 <body class="w-[1080px] h-[1920px] relative overflow-hidden ruined-bg cyber-grid">
 
-    <!-- EFECTO AURA DE NIEBLA -->
+    <!-- EFECTO AURA DE NIEBLA DE FONDO -->
     <div class="mist-aura"></div>
 
-    <div class="w-[1080px] h-[1920px] pt-12 pb-12 px-10 flex flex-col justify-between items-center relative z-10">
+    <div class="w-[1080px] h-[1920px] pt-14 pb-14 px-8 flex flex-col justify-between items-center relative z-10">
 
-        <!-- 1. HEADER SUPERIOR: EMBLEMA + FECHA DINÁMICA MÁS GRANDE -->
-        <div class="w-[960px] flex flex-col items-center">
+        <!-- 1. HEADER SUPERIOR: PROTAGONISTA (MUCHO MÁS GRANDE Y RESALTADO) -->
+        <div class="w-[980px] flex flex-col items-center">
             
             <!-- Emblema de Dragón / Corona Arruinada -->
-            <div class="mb-4 flex items-center justify-center gap-4">
-                <div class="h-[2px] w-32 bg-gradient-to-r from-transparent to-ruined-cyan"></div>
-                <i class="fa-solid fa-dragon text-ruined-cyan text-5xl glow-cyan"></i>
-                <div class="h-[2px] w-32 bg-gradient-to-l from-transparent to-ruined-cyan"></div>
+            <div class="mb-4 flex items-center justify-center gap-5">
+                <div class="h-[3px] w-36 bg-gradient-to-r from-transparent to-ruined-cyan"></div>
+                <i class="fa-solid fa-dragon text-ruined-cyan text-6xl glow-cyan"></i>
+                <div class="h-[3px] w-36 bg-gradient-to-l from-transparent to-ruined-cyan"></div>
             </div>
 
-            <div class="glass-panel w-full py-8 px-8 rounded-3xl relative flex flex-col items-center gap-3 pulse-border">
-                <div class="corner-ornament corner-tl w-6 h-6"></div>
-                <div class="corner-ornament corner-tr w-6 h-6"></div>
-                <div class="corner-ornament corner-bl w-6 h-6"></div>
-                <div class="corner-ornament corner-br w-6 h-6"></div>
+            <!-- PANEL CABECERA EXPANDIDO Y RESALTADO -->
+            <div class="glass-panel w-full py-10 px-8 rounded-3xl relative flex flex-col items-center gap-4 pulse-border border-2 border-ruined-cyan">
+                <div class="corner-ornament corner-tl w-7 h-7"></div>
+                <div class="corner-ornament corner-tr w-7 h-7"></div>
+                <div class="corner-ornament corner-bl w-7 h-7"></div>
+                <div class="corner-ornament corner-br w-7 h-7"></div>
 
-                <!-- DÍA DE LA SEMANA DINÁMICO -->
+                <!-- DÍA DE LA SEMANA DINÁMICO (TEXTO XL) -->
                 <div class="flex items-center gap-4">
-                    <i class="fa-solid fa-calendar-day text-ruined-cyan text-3xl"></i>
-                    <span id="currentDay" class="font-orbitron text-4xl font-black tracking-widest text-white uppercase glow-cyan">
+                    <i class="fa-solid fa-calendar-day text-ruined-cyan text-4xl glow-cyan"></i>
+                    <span id="currentDay" class="font-orbitron text-5xl font-black tracking-wider text-white uppercase glow-cyan leading-none">
                         CARGANDO...
                     </span>
                 </div>
 
+                <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-ruined-cyan/40 to-transparent my-1"></div>
+
                 <!-- RECORDATORIO DEL DIRECTO -->
-                <div class="flex items-center gap-3 mt-2 text-center">
-                    <i class="fa-brands fa-twitch text-purple-400 text-3xl"></i>
+                <div class="flex items-center justify-center gap-4 text-center">
+                    <i class="fa-brands fa-twitch text-purple-400 text-4xl"></i>
                     <p class="font-rajdhani text-3xl font-extrabold text-white tracking-wide">
-                        HOY HAY DIRECTO A LAS <span class="text-ruined-cyan underline">10:00 PM</span> <span class="text-base text-ruined-cyan/80">(CDMX)</span>
+                        HOY HAY DIRECTO A LAS <span class="text-ruined-cyan underline font-black text-4xl">10:00 PM</span> <span class="text-lg text-ruined-cyan/80">(CDMX)</span>
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- 2. MARCO DE CÁMARA AJUSTADO AL TAMAÑO REAL (Sugerido para encajar perfectamente con la webcam en OBS) -->
-        <div class="glass-panel w-[960px] h-[720px] rounded-3xl relative pulse-border bg-transparent border-2 border-ruined-cyan/60 flex items-center justify-center">
+        <!-- 2. MARCO DE CÁMARA AJUSTADO (MÁS COMPACTO Y CEÑIDO) -->
+        <div class="glass-panel w-[980px] h-[560px] rounded-3xl relative pulse-border bg-transparent border-2 border-ruined-cyan/60 flex items-center justify-center">
             <div class="corner-ornament corner-tl w-7 h-7"></div>
             <div class="corner-ornament corner-tr w-7 h-7"></div>
             <div class="corner-ornament corner-bl w-7 h-7"></div>
             <div class="corner-ornament corner-br w-7 h-7"></div>
 
-            <!-- Borde interno decorativo estilo bisel -->
-            <div class="absolute inset-3 border border-ruined-cyan/25 rounded-2xl pointer-events-none"></div>
+            <!-- Bisel interno de detalle -->
+            <div class="absolute inset-2 border border-ruined-cyan/30 rounded-2xl pointer-events-none"></div>
 
-            <!-- Guía visual opcional (Aparece detrás de tu cámara) -->
-            <span class="text-ruined-cyan/20 font-orbitron font-bold text-2xl tracking-widest uppercase">
-                UBICACIÓN DE CÁMARA WEB
+            <span class="text-ruined-cyan/20 font-orbitron font-bold text-xl tracking-widest uppercase">
+                UBICACIÓN DE CÁMARA
             </span>
         </div>
 
-        <!-- 3. FOOTER INFERIOR: REDES SOCIALES EN GRILLA LEGIBLE -->
-        <div class="w-[960px]">
+        <!-- 3. FOOTER INFERIOR: REDES SOCIALES AMPLIADAS -->
+        <div class="w-[980px]">
             <div class="glass-panel py-6 px-8 rounded-3xl relative border-2 border-ruined-cyan/60 shadow-2xl">
-                <div class="corner-ornament corner-tl w-5 h-5"></div>
-                <div class="corner-ornament corner-tr w-5 h-5"></div>
-                <div class="corner-ornament corner-bl w-5 h-5"></div>
-                <div class="corner-ornament corner-br w-5 h-5"></div>
+                <div class="corner-ornament corner-tl w-6 h-6"></div>
+                <div class="corner-ornament corner-tr w-6 h-6"></div>
+                <div class="corner-ornament corner-bl w-6 h-6"></div>
+                <div class="corner-ornament corner-br w-6 h-6"></div>
 
-                <div class="grid grid-cols-2 gap-y-4 gap-x-8 font-rajdhani font-bold text-2xl">
+                <div class="grid grid-cols-2 gap-y-4 gap-x-8 font-rajdhani font-extrabold text-2xl">
                     <!-- YouTube -->
-                    <div class="flex items-center justify-center gap-3 text-white bg-ruined-dark/50 py-2 rounded-xl border border-ruined-cyan/20">
-                        <i class="fa-brands fa-youtube text-red-500 text-2xl"></i>
+                    <div class="flex items-center justify-center gap-3 text-white bg-ruined-dark/60 py-3 rounded-2xl border border-ruined-cyan/30">
+                        <i class="fa-brands fa-youtube text-red-500 text-3xl"></i>
                         <span>@raidencortes123</span>
                     </div>
 
                     <!-- Twitch -->
-                    <div class="flex items-center justify-center gap-3 text-white bg-ruined-dark/50 py-2 rounded-xl border border-ruined-cyan/20">
-                        <i class="fa-brands fa-twitch text-purple-400 text-2xl"></i>
+                    <div class="flex items-center justify-center gap-3 text-white bg-ruined-dark/60 py-3 rounded-2xl border border-ruined-cyan/30">
+                        <i class="fa-brands fa-twitch text-purple-400 text-3xl"></i>
                         <span>raidencortes123</span>
                     </div>
 
                     <!-- Instagram -->
-                    <div class="flex items-center justify-center gap-3 text-white bg-ruined-dark/50 py-2 rounded-xl border border-ruined-cyan/20">
-                        <i class="fa-brands fa-instagram text-pink-500 text-2xl"></i>
+                    <div class="flex items-center justify-center gap-3 text-white bg-ruined-dark/60 py-3 rounded-2xl border border-ruined-cyan/30">
+                        <i class="fa-brands fa-instagram text-pink-500 text-3xl"></i>
                         <span>raidencortes123</span>
                     </div>
 
                     <!-- TikTok -->
-                    <div class="flex items-center justify-center gap-3 text-white bg-ruined-dark/50 py-2 rounded-xl border border-ruined-cyan/20">
-                        <i class="fa-brands fa-tiktok text-ruined-cyan text-2xl"></i>
+                    <div class="flex items-center justify-center gap-3 text-white bg-ruined-dark/60 py-3 rounded-2xl border border-ruined-cyan/30">
+                        <i class="fa-brands fa-tiktok text-ruined-cyan text-3xl"></i>
                         <span>@raiden_cortes_123</span>
                     </div>
                 </div>
