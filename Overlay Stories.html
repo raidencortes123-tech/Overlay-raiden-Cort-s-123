@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0">
-    <title>Story Overlay - Focused Header & Cam</title>
+    <title>Story Overlay - Raiden Cortes</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Iconos -->
@@ -128,47 +128,47 @@
     <!-- EFECTO AURA DE NIEBLA DE FONDO -->
     <div class="mist-aura"></div>
 
-    <div class="w-[1080px] h-[1920px] pt-14 pb-14 px-8 flex flex-col justify-between items-center relative z-10">
+    <div class="w-[1080px] h-[1920px] pt-12 pb-12 px-8 flex flex-col justify-between items-center relative z-10">
 
-        <!-- 1. HEADER SUPERIOR: PROTAGONISTA (MUCHO MÁS GRANDE Y RESALTADO) -->
+        <!-- 1. HEADER SUPERIOR: MAXIMA VISIBILIDAD -->
         <div class="w-[980px] flex flex-col items-center">
             
-            <!-- Emblema de Dragón / Corona Arruinada -->
-            <div class="mb-4 flex items-center justify-center gap-5">
-                <div class="h-[3px] w-36 bg-gradient-to-r from-transparent to-ruined-cyan"></div>
+            <!-- Emblema de Dragón -->
+            <div class="mb-3 flex items-center justify-center gap-5">
+                <div class="h-[3px] w-40 bg-gradient-to-r from-transparent to-ruined-cyan"></div>
                 <i class="fa-solid fa-dragon text-ruined-cyan text-6xl glow-cyan"></i>
-                <div class="h-[3px] w-36 bg-gradient-to-l from-transparent to-ruined-cyan"></div>
+                <div class="h-[3px] w-40 bg-gradient-to-l from-transparent to-ruined-cyan"></div>
             </div>
 
-            <!-- PANEL CABECERA EXPANDIDO Y RESALTADO -->
-            <div class="glass-panel w-full py-10 px-8 rounded-3xl relative flex flex-col items-center gap-4 pulse-border border-2 border-ruined-cyan">
+            <!-- PANEL CABECERA CON FUENTES AUMENTADAS (+6-8px) -->
+            <div class="glass-panel w-full py-9 px-8 rounded-3xl relative flex flex-col items-center gap-4 pulse-border border-2 border-ruined-cyan">
                 <div class="corner-ornament corner-tl w-7 h-7"></div>
                 <div class="corner-ornament corner-tr w-7 h-7"></div>
                 <div class="corner-ornament corner-bl w-7 h-7"></div>
                 <div class="corner-ornament corner-br w-7 h-7"></div>
 
-                <!-- DÍA DE LA SEMANA DINÁMICO (TEXTO XL) -->
+                <!-- DÍA DE LA SEMANA (TEXTO MÁS GRANDE: text-6xl) -->
                 <div class="flex items-center gap-4">
-                    <i class="fa-solid fa-calendar-day text-ruined-cyan text-4xl glow-cyan"></i>
-                    <span id="currentDay" class="font-orbitron text-5xl font-black tracking-wider text-white uppercase glow-cyan leading-none">
+                    <i class="fa-solid fa-calendar-day text-ruined-cyan text-5xl glow-cyan"></i>
+                    <span id="currentDay" class="font-orbitron text-6xl font-black tracking-wider text-white uppercase glow-cyan leading-none">
                         CARGANDO...
                     </span>
                 </div>
 
                 <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-ruined-cyan/40 to-transparent my-1"></div>
 
-                <!-- RECORDATORIO DEL DIRECTO -->
+                <!-- RECORDATORIO DEL DIRECTO (TEXTO MÁS GRANDE: text-4xl) -->
                 <div class="flex items-center justify-center gap-4 text-center">
-                    <i class="fa-brands fa-twitch text-purple-400 text-4xl"></i>
-                    <p class="font-rajdhani text-3xl font-extrabold text-white tracking-wide">
-                        HOY HAY DIRECTO A LAS <span class="text-ruined-cyan underline font-black text-4xl">10:00 PM</span> <span class="text-lg text-ruined-cyan/80">(CDMX)</span>
+                    <i class="fa-brands fa-twitch text-purple-400 text-5xl"></i>
+                    <p class="font-rajdhani text-4xl font-extrabold text-white tracking-wide">
+                        HOY HAY DIRECTO A LAS <span class="text-ruined-cyan underline font-black text-5xl">10:00 PM</span> <span class="text-xl text-ruined-cyan/80">(CDMX)</span>
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- 2. MARCO DE CÁMARA AJUSTADO (MÁS COMPACTO Y CEÑIDO) -->
-        <div class="glass-panel w-[980px] h-[560px] rounded-3xl relative pulse-border bg-transparent border-2 border-ruined-cyan/60 flex items-center justify-center">
+        <!-- 2. MARCO DE CÁMARA TRANSPARENTE (SIN TEXTO EN EL CENTRO) -->
+        <div class="glass-panel w-[980px] h-[560px] rounded-3xl relative pulse-border bg-transparent border-2 border-ruined-cyan/60">
             <div class="corner-ornament corner-tl w-7 h-7"></div>
             <div class="corner-ornament corner-tr w-7 h-7"></div>
             <div class="corner-ornament corner-bl w-7 h-7"></div>
@@ -176,11 +176,9 @@
 
             <!-- Bisel interno de detalle -->
             <div class="absolute inset-2 border border-ruined-cyan/30 rounded-2xl pointer-events-none"></div>
-
-           
         </div>
 
-        <!-- 3. FOOTER INFERIOR: REDES SOCIALES AMPLIADAS -->
+        <!-- 3. FOOTER INFERIOR: REDES SOCIALES -->
         <div class="w-[980px]">
             <div class="glass-panel py-6 px-8 rounded-3xl relative border-2 border-ruined-cyan/60 shadow-2xl">
                 <div class="corner-ornament corner-tl w-6 h-6"></div>
@@ -224,7 +222,6 @@
             const now = new Date();
             const options = { weekday: 'long', day: 'numeric', month: 'long' };
             
-            // Ejemplo: MARTES, 22 DE SEPTIEMBRE
             let dateString = now.toLocaleDateString('es-MX', options).toUpperCase();
             
             document.getElementById('currentDay').innerText = dateString;
