@@ -75,7 +75,7 @@
 <body class="min-h-screen flex flex-col justify-between items-center p-6">
 
     <!-- CABECERA -->
-    <header class="w-full max-w-4xl my-8 text-center">
+    <header class="w-full max-w-5xl my-6 text-center">
         <div class="glass-panel py-6 px-8 rounded-2xl relative inline-block w-full">
             <div class="corner-ornament corner-tl"></div>
             <div class="corner-ornament corner-tr"></div>
@@ -89,15 +89,39 @@
                 </h1>
             </div>
             <p class="text-ruined-cyan/80 text-sm md:text-base font-bold tracking-wider uppercase">
-                Panel de Navegación de Recursos OBS / Aitum
+                Panel de Navegación de Recursos OBS / Aitum / Stories
             </p>
         </div>
     </header>
 
     <!-- CONTENEDOR DE TARJETAS / ENLACES -->
-    <main class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+    <main class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-auto">
 
-        <!-- 1. Overlay Chat 1 -->
+        <!-- 1. Overlay Stories (NUEVO) -->
+        <a href="Overlay%20Stories.html" class="glass-panel p-6 rounded-2xl relative group flex flex-col justify-between border-2 border-ruined-cyan/60">
+            <div class="corner-ornament corner-tl"></div>
+            <div class="corner-ornament corner-tr"></div>
+            <div class="corner-ornament corner-bl"></div>
+            <div class="corner-ornament corner-br"></div>
+
+            <div class="flex items-start justify-between mb-4">
+                <div class="flex items-center gap-3">
+                    <div class="p-3 bg-ruined-cyan/10 rounded-xl border border-ruined-cyan/30 group-hover:bg-ruined-cyan/20 transition-colors">
+                        <i class="fa-solid fa-camera-retro text-ruined-cyan text-2xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="font-cinzel text-xl font-bold text-white group-hover:text-ruined-cyan transition-colors">
+                            Overlay Stories
+                        </h2>
+                        <span class="text-xs text-gray-400 font-mono">Overlay Stories.html</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-ruined-cyan/50 group-hover:text-ruined-cyan group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
+            </div>
+            <p class="text-sm text-gray-300">Formato vertical con fecha dinámica JS y recordatorio de directo (10 PM) para Instagram / TikTok.</p>
+        </a>
+
+        <!-- 2. Overlay Chat 1 -->
         <a href="Overlay%20chat%201.html" class="glass-panel p-6 rounded-2xl relative group flex flex-col justify-between">
             <div class="corner-ornament corner-tl"></div>
             <div class="corner-ornament corner-tr"></div>
@@ -118,10 +142,10 @@
                 </div>
                 <i class="fa-solid fa-arrow-up-right-from-square text-ruined-cyan/50 group-hover:text-ruined-cyan group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
             </div>
-            <p class="text-sm text-gray-300">Modulo individual para visualización del chat en pantalla.</p>
+            <p class="text-sm text-gray-300">Módulo individual para visualización del chat en pantalla.</p>
         </a>
 
-        <!-- 2. Overlay Principal -->
+        <!-- 3. Overlay Principal -->
         <a href="Overlay%20principal.html" class="glass-panel p-6 rounded-2xl relative group flex flex-col justify-between">
             <div class="corner-ornament corner-tl"></div>
             <div class="corner-ornament corner-tr"></div>
@@ -145,7 +169,7 @@
             <p class="text-sm text-gray-300">Plantilla horizontal estándar (1920x1080) para transmisión de PC.</p>
         </a>
 
-        <!-- 3. Vertical Overlay (Con espacios) -->
+        <!-- 4. Vertical Overlay (Espacios) -->
         <a href="vertical%20overlay.html" class="glass-panel p-6 rounded-2xl relative group flex flex-col justify-between">
             <div class="corner-ornament corner-tl"></div>
             <div class="corner-ornament corner-tr"></div>
@@ -169,7 +193,7 @@
             <p class="text-sm text-gray-300">Versión vertical (1080x1920) para Aitum / TikTok / Shorts.</p>
         </a>
 
-        <!-- 4. Vertical Overlay (Con guion bajo) -->
+        <!-- 5. Vertical Overlay (Guion bajo) -->
         <a href="vertical_overlay.html" class="glass-panel p-6 rounded-2xl relative group flex flex-col justify-between">
             <div class="corner-ornament corner-tl"></div>
             <div class="corner-ornament corner-tr"></div>
@@ -190,13 +214,13 @@
                 </div>
                 <i class="fa-solid fa-arrow-up-right-from-square text-ruined-cyan/50 group-hover:text-ruined-cyan group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"></i>
             </div>
-            <p class="text-sm text-gray-300">Versión vertical optimizada con guion bajo en el nombre del archivo.</p>
+            <p class="text-sm text-gray-300">Versión vertical limpia para Aitum con espacios definidos para juego y chat.</p>
         </a>
 
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="w-full max-w-4xl my-6 text-center">
+    <footer class="w-full max-w-5xl my-6 text-center">
         <div class="glass-panel py-3 px-6 rounded-xl relative inline-flex items-center justify-center gap-2 text-sm text-gray-300">
             <div class="corner-ornament corner-tl"></div>
             <div class="corner-ornament corner-tr"></div>
